@@ -3,7 +3,7 @@ import { createStackNavigator } from "react-navigation";
 
 import LoginScreen from "./src/screens/LoginScreen";
 import BattleScreen from "./src/screens/BattleScreen";
-import CharacterSelectionScreen from "./src/screens/CharacterSelectionScreen";
+import HeroSelectionScreen from "./src/screens/HeroSelectionScreen";
 
 import Reactotron from "reactotron-react-native";
 
@@ -18,7 +18,7 @@ console.ignoredYellowBox = ["Setting a timer"];
 const RootStack = createStackNavigator(
   {
     Login: LoginScreen,
-    CharSelect: CharacterSelectionScreen,
+    HeroSelect: HeroSelectionScreen,
     Battle: BattleScreen
   },
   {
