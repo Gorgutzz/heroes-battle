@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 
 import { selectHero, setHero, setMove, setMessage } from "../../actions";
 
+import { Audio } from "expo";
 
 class HeroOption extends Component {
   render() {
@@ -58,6 +59,14 @@ class HeroOption extends Component {
       opponents_channel.trigger("client-switched-hero", {
         team_member_id: hero_data.team_member_id
       });
+
+      try {
+        let crySound = new Audio.Sound();
+        await crySound.loadAsync(cry);
+        await crySound.playAsync();
+      } catch (error) {
+        console.log("error loading cry: ", error);
+      }
 
       setTimeout(() => {
         setMessage("Please wait for your turn...");
