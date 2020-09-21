@@ -11,7 +11,7 @@ import {
   setMessage
 } from "../../actions";
 
-import getMoveEffectivenessAndDamage from "../../helpers/getMoveEffectivenessAndDamage";
+
 
 import { Audio } from "expo";
 
