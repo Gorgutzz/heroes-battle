@@ -90,8 +90,26 @@ class MovesList extends Component {
   };
 }
 
+const styles = {
+  container: {
+    width: 130,
+    marginLeft: 5,
+    marginRight: 5,
+    alignItems: "center",
+    padding: 5,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: "#ffd43b",
+    marginBottom: 10
+  },
+
+  label: {
+    fontSize: 14
+  }
+};
+
 const mapStateToProps = ({ battle }) => {
-const { opponent_hero, hero } = battle;
+  const { opponent_hero, hero } = battle;
 
   return {
     opponent_hero,
