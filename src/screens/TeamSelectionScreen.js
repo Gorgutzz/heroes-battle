@@ -6,7 +6,7 @@ import HeroList from "../components/HeroList";
 import ActionList from "../components/ActionList";
 
 
-class HeroSelectionScreen extends Component {
+class TeamSelectionScreen extends Component {
   static navigationOptions = {
     header: null
   };
@@ -25,4 +25,4 @@ class HeroSelectionScreen extends Component {
 }
 
 
-export default HeroSelectionScreen;
+export default TeamSelectionScreen;

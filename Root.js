@@ -3,22 +3,30 @@ import { createStackNavigator } from "react-navigation";
 
 import LoginScreen from "./src/screens/LoginScreen";
 import BattleScreen from "./src/screens/BattleScreen";
-import HeroSelectionScreen from "./src/screens/HeroSelectionScreen";
+import TeamSelectionScreen from "./src/screens/TeamSelectionScreen";
+
+import { Provider } from "react-redux";
+import { compose, createStore } from "redux";
+import reducers from "./src/reducers";
 
 import Reactotron from "reactotron-react-native";
-
+import { reactotronRedux } from "reactotron-redux";
 
 Reactotron.configure({ host: "YOUR_INTERNAL_IP_ADDRESS" })
   .useReactNative()
+  .use(reactotronRedux())
   .connect();
 
-console.ignoredYellowBox = ["Setting a timer"];
+const store = Reactotron.createStore(reducers, {}, compose());
 
+//const store = createStore(reducers);
+
+console.ignoredYellowBox = ["Setting a timer"];
 
 const RootStack = createStackNavigator(
   {
     Login: LoginScreen,
-    HeroSelect: HeroSelectionScreen,
+    TeamSelect: TeamSelectionScreen,
     Battle: BattleScreen
   },
   {
@@ -28,7 +36,11 @@ const RootStack = createStackNavigator(
 
 class Router extends Component {
   render() {
-    return <RootStack />;
+    return (
+      <Provider store={store}>
+        <RootStack />
+      </Provider>
+    );
   }
 }
 
