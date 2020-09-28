@@ -24,11 +24,11 @@ import shuffleArray from "../helpers/shuffleArray";
 import {
   setOpponentTeam,
   setMove,
-  setOpponentPokemon,
-  setPokemonHealth,
-  removePokemonFromTeam,
+  setOpponentHero,
+  setHeromonHealth,
+  removeHeroFromTeam,
   setMessage,
-  removePokemonFromOpponentTeam
+  removeHeroFromOpponentTeam
 } from "../actions";
 
 class BattleScreen extends Component {
@@ -51,22 +51,22 @@ class BattleScreen extends Component {
       navigation,
       team,
       setMove,
-      removePokemonFromOpposingTeam,
+      removeHeroFromOpposingTeam,
       setMessage,
-      setPokemonHealth,
-      removePokemonFromTeam
+      setHeroHealth,
+      removeHeroFromTeam
     } = this.props;
     let pusher = navigation.getParam("pusher");
 
-    const { username, pokemon_ids, team_member_ids } = navigation.getParam(
+    const { username, hero_ids, team_member_ids } = navigation.getParam(
       "opponent"
     );
 
-    let opponent_pokemon_ids = pokemon_ids.split(",");
+    let opponent_hero_ids = hero_ids.split(",");
     let opponent_team_member_ids = team_member_ids.split(",");
 
-    let opponent_team_data = pokemon_data.filter(item => {
-      return opponent_pokemon_ids.indexOf(item.id.toString()) !== -1;
+    let opponent_team_data = hero_data.filter(item => {
+      return opponent_hero_ids.indexOf(item.id.toString()) !== -1;
     });
 
     opponent_team_data = opponent_team_data.map((item, index) => {
@@ -98,7 +98,7 @@ class BattleScreen extends Component {
     });
 
     setOpponentTeam(sorted_opponent_team);
-    setOpponentPokemon(sorted_opponent_team[0]);
+    setOpponentHero(sorted_opponent_team[0]);
 
     this.opponents_channel = pusher.subscribe(`private-user-${username}`);
     this.opponents_channel.bind("pusher:subscription_error", status => {
@@ -119,8 +119,8 @@ class BattleScreen extends Component {
 
     let my_channel = navigation.getParam("my_channel");
 
-    my_channel.bind("client-switched-pokemon", async ({ team_member_id }) => {
-      let pokemon = sorted_opponent_team.find(item => {
+    my_channel.bind("client-switched-hero", async ({ team_member_id }) => {
+      let hero = sorted_opponent_team.find(item => {
         return item.team_member_id == team_member_id;
       });
 
@@ -186,6 +186,164 @@ class BattleScreen extends Component {
     }
   }
 
+  render() {
+    const {
+      team,
+      move,
+      move_display_text,
+      hero,
+      opponent_hero,
+      backToMove,
+
+      message
+    } = this.props;
+
+    return (
+      <View style={styles.container}>
+        <CustomText styles={[styles.headerText]}>Fight!</CustomText>
+
+        <View style={styles.battleGround}>
+          {opponent_hero && (
+            <View style={styles.opponent}>
+              <HealthBar
+                currentHealth={opponent_hero.current_hp}
+                totalHealth={opponent_hero.total_hp}
+                label={opponent_hero.label}
+              />
+              <HeroFullSprite
+                hero={opponent_hero.label}
+                spriteFront={opponent_hero.front}
+                spriteBack={opponent_hero.back}
+                orientation={"front"}
+                isAlive={opponent_hero.current_hp > 0}
+                currentHealth={opponent_hero.current_hp}
+              />
+            </View>
+          )}
+
+          {hero && (
+            <View style={styles.currentPlayer}>
+              <HealthBar
+                currentHealth={hero.current_hp}
+                totalHealth={hero.total_hp}
+                label={hero.label}
+              />
+
+              <HeroFullSprite
+                hero={hero.label}
+                spriteFront={hero.front}
+                spriteBack={hero.back}
+                orientation={"back"}
+                isAlive={hero.current_hp > 0}
+                currentHealth={hero.current_hp}
+              />
+            </View>
+          )}
+        </View>
+
+        <View style={styles.controls}>
+          <View style={styles.controlsHeader}>
+            {(move == "select-hero" || move == "select-hero-move") && (
+              <TouchableOpacity
+                style={styles.backButton}
+                onPress={() => {
+                  backToMove();
+                }}
+              >
+                <Ionicons name="md-arrow-round-back" size={20} color="#333" />
+              </TouchableOpacity>
+            )}
+
+            {move != "wait-for-turn" && (
+              <CustomText styles={styles.controlsHeaderText}>
+                {move_display_text}
+              </CustomText>
+            )}
+
+            {move == "wait-for-turn" && (
+              <CustomText styles={styles.message}>{message}</CustomText>
+            )}
+          </View>
+
+          {move == "select-move" && <ActionList />}
+
+          {move == "select-hero" &&
+            this.opponents_channel && (
+              <HeroList
+                data={team}
+                scrollEnabled={false}
+                numColumns={2}
+                action_type={"switch-hero"}
+                opponents_channel={this.opponents_channel}
+              />
+            )}
+
+          {hero &&
+            this.opponents_channel &&
+            move == "select-hero-move" && (
+              <MovesList
+                moves={hero.moves}
+                opponents_channel={this.opponents_channel}
+              />
+            )}
+        </View>
+      </View>
+    );
+  }
+}
+
+const mapStateToProps = ({ battle }) => {
+  const {
+    team,
+    move,
+    move_display_text,
+    hero,
+    opponent_team,
+    opponent_hero,
+
+    message
+  } = battle;
+  return {
+    team,
+    move,
+    move_display_text,
+    hero,
+    opponent_team,
+    opponent_hero,
+
+    message
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    backToMove: () => {
+      dispatch(setMove("select-move"));
+    },
+    setOpponentTeam: team => {
+      dispatch(setOpponentTeam(team));
+    },
+    setOpponentHero: hero => {
+      dispatch(setOpponentHero(hero));
+    },
+
+    setMessage: message => {
+      dispatch(setMessage(message));
+    },
+    setHeroHealth: (team_member_id, health) => {
+      dispatch(setHeroHealth(team_member_id, health));
+    },
+    setMove: move => {
+      dispatch(setMove(move));
+    },
+    removeHeroFromTeam: team_member_id => {
+      dispatch(removeHeroFromTeam(team_member_id));
+    },
+    removeHeroFromOpposingTeam: team_member_id => {
+      dispatch(removeHeroFromOpposingTeam(team_member_id));
+    }
+  };
+};
 
 
 export default BattleScreen;
