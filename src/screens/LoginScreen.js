@@ -23,7 +23,7 @@ export default class LoginScreen extends Component {
     try {
       this.backgroundSound = new Audio.Sound();
       await this.backgroundSound.loadAsync(
-        require("")
+        require("../assets/sounds/background/opening.mp3")
       );
       await this.backgroundSound.setIsLoopingAsync(true);
       await this.backgroundSound.playAsync();
