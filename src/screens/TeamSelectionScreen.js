@@ -203,5 +203,32 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TeamSelectionScreen);
 
-export default TeamSelectionScreen;
+const styles = {
+  container: {
+    flex: 1
+  },
+  headerText: {
+    fontSize: 20,
+    marginTop: 50,
+    marginBottom: 10,
+    alignSelf: "center"
+  },
+  confirmButton: {
+    padding: 10,
+    alignSelf: "center",
+    marginBottom: 10,
+    backgroundColor: "#95ff84"
+  },
+  loadingContainer: {
+    alignItems: "center"
+  },
+  messageText: {
+    fontSize: 13,
+    color: "#676767"
+  }
+};
