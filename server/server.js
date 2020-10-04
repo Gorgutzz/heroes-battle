@@ -75,3 +75,6 @@ app.post("/pusher/auth", function(req, res) {
     res.status(400);
   }
 });
+
+var port = process.env.PORT || 5000;
+app.listen(port);
