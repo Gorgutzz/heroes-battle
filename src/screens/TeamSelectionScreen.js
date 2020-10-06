@@ -125,9 +125,9 @@ class TeamSelectionScreen extends Component {
 
     const username = navigation.getParam("username");
 
-    this.pusher = new Pusher("YOUR_PUSHER_APP_KEY", {
-      authEndpoint: "YOUR_NGROK_URL/pusher/auth",
-      cluster: "YOUR_PUSHER_APP_CLUSTER",
+    this.pusher = new Pusher("f74a9244abd0b2af2bcb", {
+      authEndpoint: "https://59c676866a30.ngrok.io/pusher/auth",
+      cluster: "us2",
       encrypted: true,
       auth: {
         params: {
