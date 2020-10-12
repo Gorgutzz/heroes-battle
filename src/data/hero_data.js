@@ -20,7 +20,97 @@ const hero_data = [
     type_defenses: {
       normal: 1,
     }
-  }
+  },
+  {
+    id: 3,
+    label: "Batman",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 4,
+    label: "Superman",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 5,
+    label: "Darth Vader",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 6,
+    label: "Mario",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 7,
+    label: "Wolverine",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 8,
+    label: "Spiderman",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 9,
+    label: "Luke Skywalker",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 10,
+    label: "Master Chief",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+
+
 ];
 
 export default hero_data;

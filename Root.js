@@ -12,7 +12,7 @@ import reducers from "./src/reducers";
 import Reactotron from "reactotron-react-native";
 import { reactotronRedux } from "reactotron-redux";
 
-Reactotron.configure({ host: "192.168.158.128" })
+Reactotron.configure({ host: "YOUR_INTERNAL_IP_ADDRESS" })
   .useReactNative()
   .use(reactotronRedux())
   .connect();
