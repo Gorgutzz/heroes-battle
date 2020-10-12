@@ -49,23 +49,78 @@ const moves_data = [
     type: "immobilize"
   },
   {
-    id: 8,
+    id: 9,
     title: "Lightsaber Attack",
     power: 50,
     type: "weapon"
   },
   {
-    id: 8,
+    id: 10,
     title: "Force Push",
     power: 35,
-    type: "Magic"
+    type: "magic"
   },
   {
-    id: 8,
+    id: 11,
     title: "Force Choke",
     power: 75,
-    type: "Magic"
+    type: "magic"
   },
+  {
+    id: 12,
+    title: "Fireball",
+    power: 75,
+    type: "fire"
+  },
+  {
+    id: 13,
+    title: "Cape",
+    power: 75,
+    type: "clothing"
+  },
+  {
+    id: 14,
+    title: "Super Jump Punch",
+    power: 75,
+    type: "normal"
+  },
+  {
+    id: 15,
+    title: "Claw Slash",
+    power: 75,
+    type: "weapon"
+  },
+  {
+    id: 16,
+    title: "Weapon X",
+    power: 75,
+    type: "weapon"
+  },
+  {
+    id: 17,
+    title: "Berserker Charge",
+    power: 75,
+    type: "normal"
+  },
+  {
+    id: 18,
+    title: "Web Throw",
+    power: 75,
+    type: "immobilize"
+  },
+  {
+    id: 19,
+    title: "Spider Bite",
+    power: 75,
+    type: "normal"
+  },
+  {
+    id: 20,
+    title: "Spider Sting",
+    power: 75,
+    type: "normal"
+  },
+
 ];
 
 export default moves_data;
