@@ -69,31 +69,31 @@ const moves_data = [
   {
     id: 12,
     title: "Fireball",
-    power: 75,
+    power: 60,
     type: "fire"
   },
   {
     id: 13,
     title: "Cape",
-    power: 75,
+    power: 40,
     type: "clothing"
   },
   {
     id: 14,
     title: "Super Jump Punch",
-    power: 75,
+    power: 55,
     type: "normal"
   },
   {
     id: 15,
     title: "Claw Slash",
-    power: 75,
+    power: 55,
     type: "weapon"
   },
   {
     id: 16,
     title: "Weapon X",
-    power: 75,
+    power: 80,
     type: "weapon"
   },
   {
@@ -105,13 +105,13 @@ const moves_data = [
   {
     id: 18,
     title: "Web Throw",
-    power: 75,
+    power: 30,
     type: "immobilize"
   },
   {
     id: 19,
     title: "Spider Bite",
-    power: 75,
+    power: 60,
     type: "normal"
   },
   {
