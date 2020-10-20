@@ -218,6 +218,116 @@ const hero_data = [
     type_defenses: {
       normal: 1,
     }
+  },
+  {
+    id: 21,
+    label: "T-800",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 22,
+    label: "Ken",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 23,
+    label: "Ryu",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 24,
+    label: "Zangief",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 25,
+    label: "Kitana",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 26,
+    label: "Mileena",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 27,
+    label: "Green Lantern",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 28,
+    label: "Princess Peach",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 29,
+    label: "Princess Peach",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
+  },
+  {
+    id: 30,
+    label: "Luigi",
+    front: require(""),
+    back: require(""),
+    sprite: require(""),
+    moves: [8, 9, 10, 11, 12, 13],
+    type_defenses: {
+      normal: 1,
+    }
   }
 
 ];
