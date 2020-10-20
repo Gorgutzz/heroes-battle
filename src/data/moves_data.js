@@ -120,6 +120,18 @@ const moves_data = [
     power: 75,
     type: "normal"
   },
+  {
+    id: 21,
+    title: "Thunder Shock",
+    power: 80,
+    type: "electric"
+  },
+  {
+    id: 22,
+    title: "Tail Whip",
+    power: 40,
+    type: "normal"
+  },
 
 ];
 
