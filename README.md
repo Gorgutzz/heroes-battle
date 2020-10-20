@@ -12,3 +12,66 @@ A multiplayer hero battle game implemented with React Native and Pusher. Uses he
 
 
 ## Getting Started
+
+1. Clone the repo:
+
+2. Install the app dependencies:
+
+```
+cd heroes-battle
+yarn install
+```
+
+3. Update Pusher config on `src/screens/TeamSelectionScreen.js` file:
+
+```
+componentDidMount() {
+    this.pusher = new Pusher("YOUR PUSHER APP KEY", {
+      authEndpoint: "YOUR_NGROK_URL/pusher/auth",
+      cluster: "YOUR PUSHER APP CLUSTER",
+      encrypted: true
+    });
+}
+```
+
+4. Install the server dependencies:
+
+```
+cd server
+npm install
+```
+
+5. Update the `.env` file:
+
+```
+APP_ID=YOUR_PUSHER_APP_ID
+APP_KEY=YOUR_PUSHER_APP_KEY
+APP_SECRET=YOUR_PUSHER_APP_SECRET
+APP_CLUSTER=YOUR_PUSHER_APP_CLUSTER
+PORT=3000
+```
+
+
+6. Run the server:
+
+```
+node server.js
+```
+
+7. [Download ngrok executable file](https://dashboard.ngrok.com/get-started).
+
+8. Expose server using ngrok:
+
+
+```
+./ngrok authtoken YOUR_NGROK_AUTH_TOKEN
+./ngrok http 3000
+```
+
+9. Copy the ngrok https URL and update the `authEndpoint` in the `src/screens/TeamSelectionScreen.js` file.
+
+10. Run the app and open it in your Expo client app:
+
+```
+expo start
+```
