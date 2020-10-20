@@ -248,17 +248,208 @@ const moves_data = [
   },
   {
     id: 42,
-    title: "",
+    title: "Homing Attack",
+    power: 70,
+    type: "normal"
+  },
+  {
+    id: 43,
+    title: "Spin Dash",
+    power: 60,
+    type: "normal"
+  },
+  {
+    id: 44,
+    title: "Spring Jump",
+    power: 55,
+    type: "normal"
+  },
+  {
+    id: 45,
+    title: "C4",
+    power: 85,
+    type: "weapon"
+  },
+  {
+    id: 46,
+    title: "Machine Gun",
+    power: 65,
+    type: "weapon"
+  },
+  {
+    id: 47,
+    title: "Bow and Arrow",
+    power: 70,
+    type: "weapon"
+  },
+  {
+    id: 48,
+    title: "Dragon Breath",
+    power: 60,
+    type: "dragon"
+  },
+  {
+    id: 49,
+    title: "Flamethrower",
+    power: 90,
+    type: "fire"
+  },
+  {
+    id: 50,
+    title: "Ember",
+    power: 40,
+    type: "fire"
+  },
+  {
+    id: 51,
+    title: "Inferno",
+    power: 100,
+    type: "fire"
+  },
+  {
+    id: 52,
+    title: "slash",
+    power: 70,
+    type: "normal"
+  },
+  {
+    id: 53,
+    title: "Hadouken",
+    power: 70,
+    type: "magic"
+  },
+  {
+    id: 54,
+    title: "Shoryuken",
+    power: 55,
+    type: "weapon"
+  },
+  {
+    id: 55,
+    title: "Tatsumaki Senpukyaku",
+    power: 80,
+    type: "normal"
+  },
+  {
+    id: 56,
+    title: "Double Lariat",
+    power: 70,
+    type: "normal"
+  },
+  {
+    id: 57,
+    title: "Siberian Express",
+    power: 80,
+    type: "normal"
+  },
+  {
+    id: 58,
+    title: "Borscht Dynamite",
+    power: 85,
+    type: "normal"
+  },
+  {
+    id: 59,
+    title: "Fan Toss",
     power: 60,
     type: "weapon"
   },
   {
-    id: 43,
-    title: "",
-    power: 60,
+    id: 60,
+    title: "Cutting Fan",
+    power: 70,
+    type: "normal"
+  },
+  {
+    id: 61,
+    title: "Pretty Kick",
+    power: 75,
+    type: "normal"
+  },
+  {
+    id: 62,
+    title: "Man Eater",
+    power: 85,
+    type: "normal"
+  },
+  {
+    id: 63,
+    title: "Sai Stabs",
+    power: 75,
     type: "weapon"
   },
-
+  {
+    id: 64,
+    title: "Ball Roll",
+    power: 70,
+    type: "normal"
+  },
+  {
+    id: 65,
+    title: "Oa’s Rocket",
+    power: 70,
+    type: "normal"
+  },
+  {
+    id: 66,
+    title: "Lantern’s Might",
+    power: 80,
+    type: "weapon"
+  },
+  {
+    id: 67,
+    title: "Turbine Smash",
+    power: 75,
+    type: "normal"
+  },
+  {
+    id: 68,
+    title: "Peach Blossom",
+    power: 75,
+    type: "normal"
+  },
+  {
+    id: 69,
+    title: "Toad",
+    power: 70,
+    type: "weapon"
+  },
+  {
+    id: 70,
+    title: "Peach Bomber",
+    power: 80,
+    type: "normal"
+  },
+  {
+    id: 71,
+    title: "Fire Breath",
+    power: 65,
+    type: "fire"
+  },
+  {
+    id: 72,
+    title: "Flying Slam",
+    power: 75,
+    type: "flying"
+  },
+  {
+    id: 73,
+    title: "Giga Bowser Punch",
+    power: 85,
+    type: "normal"
+  },
+  {
+    id: 74,
+    title: "Green Missle",
+    power: 70,
+    type: "fire"
+  },
+  {
+    id: 75,
+    title: "Luigi Cyclone",
+    power: 85,
+    type: "flying"
+  }
 ];
 
 export default moves_data;

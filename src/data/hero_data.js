@@ -181,7 +181,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 41, 42, 43],
     type_defenses: {
       normal: 1,
     }
@@ -192,7 +192,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 24, 41, 45],
     type_defenses: {
       normal: 1,
     }
@@ -203,7 +203,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 24, 46, 47],
     type_defenses: {
       normal: 1,
     }
@@ -214,7 +214,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [48, 49, 50, 51, 52],
     type_defenses: {
       normal: 1,
     }
@@ -225,7 +225,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 40, 41, 46],
     type_defenses: {
       normal: 1,
     }
@@ -236,7 +236,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 53, 54, 55],
     type_defenses: {
       normal: 1,
     }
@@ -247,7 +247,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [8, 9, 10, 11, 12, 13],
+    moves: [1, 2, 53, 54, 55],
     type_defenses: {
       normal: 1,
     }
@@ -258,7 +258,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 56, 57, 58],
     type_defenses: {
       normal: 1,
     }
@@ -269,7 +269,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 59, 60, 61],
     type_defenses: {
       normal: 1,
     }
@@ -280,7 +280,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 62, 63, 64],
     type_defenses: {
       normal: 1,
     }
@@ -291,7 +291,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 65, 66, 67],
     type_defenses: {
       normal: 1,
     }
@@ -302,18 +302,18 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 68, 69, 70],
     type_defenses: {
       normal: 1,
     }
   },
   {
     id: 29,
-    label: "Princess Peach",
+    label: "Bowser",
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 71, 72, 73],
     type_defenses: {
       normal: 1,
     }
@@ -324,7 +324,7 @@ const hero_data = [
     front: require(""),
     back: require(""),
     sprite: require(""),
-    moves: [],
+    moves: [1, 2, 12, 74, 75],
     type_defenses: {
       normal: 1,
     }
