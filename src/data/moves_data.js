@@ -132,6 +132,132 @@ const moves_data = [
     power: 40,
     type: "normal"
   },
+  {
+    id: 23,
+    title: "Burst Fire",
+    power: 65,
+    type: "weapon"
+  },
+  {
+    id: 24,
+    title: "Throw Grenade",
+    power: 85,
+    type: "weapon"
+  },
+  {
+    id: 25,
+    title: "Weapon Bash",
+    power: 50,
+    type: "weapon"
+  },
+  {
+    id: 26,
+    title: "Ice Freeze",
+    power: 45,
+    type: "immobilize"
+  },
+  {
+    id: 27,
+    title: "Ice Ball",
+    power: 65,
+    type: "ice"
+  },
+  {
+    id: 28,
+    title: "Frigid Storm",
+    power: 85,
+    type: "ice"
+  },
+  {
+    id: 29,
+    title: "Shoulder Cannon Blast",
+    power: 75,
+    type: "weapon"
+  },
+  {
+    id: 30,
+    title: "Smart Disc",
+    power: 60,
+    type: "weapon"
+  },
+  {
+    id: 31,
+    title: "Xeno Strike",
+    power: 75,
+    type: "normal"
+  },
+  {
+    id: 32,
+    title: "Acid Spit",
+    power: 55,
+    type: "acidic"
+  },
+  {
+    id: 33,
+    title: "Hellfire",
+    power: 65,
+    type: "fire"
+  },
+  {
+    id: 34,
+    title: "Kunai Throw",
+    power: 50,
+    type: "weapon"
+  },
+  {
+    id: 35,
+    title: "Teleport Punch",
+    power: 45,
+    type: "normal"
+  },
+  {
+    id: 36,
+    title: "Lasso of Truth",
+    power: 55,
+    type: "weapon"
+  },
+  {
+    id: 37,
+    title: "Shield Toss",
+    power: 50,
+    type: "weapon"
+  },
+  {
+    id: 38,
+    title: "Amalthea Bash",
+    power: 65,
+    type: "weapon"
+  },
+  {
+    id: 39,
+    title: "Zero Laser",
+    power: 55,
+    type: "weapon"
+  },
+  {
+    id: 40,
+    title: "Bomb",
+    power: 80,
+    type: "weapon"
+  },
+  {
+    id: 41,
+    title: "Missle",
+    power: 60,
+    type: "weapon"
+  },
+  {
+    id: 42,
+    title: "",
+    power: 60,
+    type: "weapon"
+  },
+  {
+    id: 43,
+    title: "",
+    power: 60,
+    type: "weapon"
+  },
 
 ];
 
